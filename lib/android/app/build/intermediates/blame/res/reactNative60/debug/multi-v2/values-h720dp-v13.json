@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/incremental/mergeReactNative60DebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}

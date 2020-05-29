@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_fade_out.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_tooltip_enter.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/catalyst_push_up_out.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/55f8a7b3a1d64ad0c2cd87a0de5243b4/jetified-react-native-0.62.2/res/anim/catalyst_push_up_out.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/catalyst_slide_up.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/55f8a7b3a1d64ad0c2cd87a0de5243b4/jetified-react-native-0.62.2/res/anim/catalyst_slide_up.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/catalyst_fade_in.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/55f8a7b3a1d64ad0c2cd87a0de5243b4/jetified-react-native-0.62.2/res/anim/catalyst_fade_in.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/catalyst_fade_out.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/55f8a7b3a1d64ad0c2cd87a0de5243b4/jetified-react-native-0.62.2/res/anim/catalyst_fade_out.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/catalyst_slide_down.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/55f8a7b3a1d64ad0c2cd87a0de5243b4/jetified-react-native-0.62.2/res/anim/catalyst_slide_down.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_fade_in.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/catalyst_push_up_in.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/55f8a7b3a1d64ad0c2cd87a0de5243b4/jetified-react-native-0.62.2/res/anim/catalyst_push_up_in.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/build/intermediates/res/merged/reactNative60/debug/anim/abc_tooltip_exit.xml",
+        "source": "/Users/unitedremote/.gradle/caches/transforms-2/files-2.1/305f7d781fe4651e8359fc04ca384251/appcompat-1.0.2/res/anim/abc_tooltip_exit.xml"
+    }
+]

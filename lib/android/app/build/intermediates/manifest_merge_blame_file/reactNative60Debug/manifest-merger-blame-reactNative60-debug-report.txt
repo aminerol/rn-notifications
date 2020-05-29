@@ -1,0 +1,57 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.wix.reactnativenotifications"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml
+10
+11<!--      Permissions required for enabling FCM. -->
+12    <permission
+13        android:name="dollar_openBracket_applicationId_closeBracket.permission.C2D_MESSAGE"
+14        android:protectionLevel="signature" />
+15
+16    <uses-permission android:name="dollar_openBracket_applicationId_closeBracket.permission.C2D_MESSAGE" />
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:13:5-66
+17-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:13:22-63
+18
+19    <application>
+19-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:15:5-36:19
+20
+21<!--          A proxy-service that gives the library an opportunity to do some work before launching/resuming the actual application task. -->
+22        <service android:name="com.wix.reactnativenotifications.core.ProxyService" />
+22-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:20:9-53
+22-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:20:18-51
+23        <service android:name="com.wix.reactnativenotifications.fcm.FcmInstanceIdListenerService" >
+23-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:22:9-28:19
+23-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:23:13-61
+24            <intent-filter>
+24-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:24:13-27:29
+25                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+25-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:25:17-78
+25-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:25:25-75
+26                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+26-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:26:17-80
+26-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:26:25-77
+27            </intent-filter>
+28        </service>
+29        <service
+29-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:30:9-33:40
+30            android:name="com.wix.reactnativenotifications.fcm.FcmInstanceIdRefreshHandlerService"
+30-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:32:13-67
+31            android:exported="false"
+31-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:33:13-37
+32            android:permission="android.permission.BIND_JOB_SERVICE" />
+32-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:31:13-69
+33
+34        <receiver android:name="com.wix.reactnativenotifications.core.notification.PushNotificationPublisher" />
+34-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:35:9-113
+34-->/Users/unitedremote/Desktop/gemo-pop/node_modules/react-native-notifications/lib/android/app/src/main/AndroidManifest.xml:35:19-110
+35    </application>
+36
+37</manifest>
