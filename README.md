@@ -1,13 +1,13 @@
 # React Native Notifications
-![npm](https://img.shields.io/npm/dw/react-native-notifications.svg)
-[![Build Status](https://img.shields.io/jenkins/s/http/jenkins-oss.wixpress.com:8080/job/multi-react-native-notifications-master.svg)](https://jenkins-oss.wixpress.com/job/multi-react-native-notifications-master/)
-[![npm (tag)](https://img.shields.io/npm/v/react-native-notifications/snapshot.svg)](https://github.com/wix/react-native-navigation/tree/master)
+![npm](https://img.shields.io/npm/dw/rn-notifications.svg)
+[![Build Status](https://img.shields.io/jenkins/s/http/jenkins-oss.wixpress.com:8080/job/multi-rn-notifications-master.svg)](https://jenkins-oss.wixpress.com/job/multi-rn-notifications-master/)
+[![npm (tag)](https://img.shields.io/npm/v/rn-notifications/snapshot.svg)](https://github.com/wix/react-native-navigation/tree/master)
 
 Handle all the aspects of push notifications for your app, including remote and local notifications, interactive notifications, silent notifications, and more.
 
 **All the native iOS notifications features are supported!** 
 
-_For information regarding proper integration with [react-native-navigation](https://github.com/wix/react-native-navigation), follow [this wiki](https://github.com/wix/react-native-notifications/wiki/Android:-working-with-RNN)._
+_For information regarding proper integration with [react-native-navigation](https://github.com/wix/react-native-navigation), follow [this wiki](https://github.com/wix/rn-notifications/wiki/Android:-working-with-RNN)._
 
 
 ### iOS
@@ -31,9 +31,9 @@ _Upcoming: local notifications, background-state Rx queue (iOS equivalent)_
 
 
 # Quick Links
-- [Getting Started](https://wix.github.io/react-native-notifications/docs/getting-started)
-- [API](https://wix.github.io/react-native-notifications/docs/general-api)
-- [Documentation](https://wix.github.io/react-native-notifications/)
+- [Getting Started](https://wix.github.io/rn-notifications/docs/getting-started)
+- [API](https://wix.github.io/rn-notifications/docs/general-api)
+- [Documentation](https://wix.github.io/rn-notifications/)
 
 # License
 The MIT License.

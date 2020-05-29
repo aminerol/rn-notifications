@@ -59,7 +59,7 @@
 
 #### Bug Fixes:
 
-- Remove vibrate permissions maxSdkVersion, fix example project on android [#388](https://github.com/wix/react-native-notifications/pull/388)
+- Remove vibrate permissions maxSdkVersion, fix example project on android [#388](https://github.com/wix/rn-notifications/pull/388)
 
 ---
 
@@ -67,11 +67,11 @@
 
 #### Enhancements:
 
-- Autogenerate changelog using github-release-notes [#382](https://github.com/wix/react-native-notifications/pull/382)
+- Autogenerate changelog using github-release-notes [#382](https://github.com/wix/rn-notifications/pull/382)
 
 #### Bug Fixes:
 
-- Fixing white square icon and annotation error [#379](https://github.com/wix/react-native-notifications/pull/379)
+- Fixing white square icon and annotation error [#379](https://github.com/wix/rn-notifications/pull/379)
 
 ---
 
@@ -84,8 +84,8 @@
 
 #### Enhancements:
 
-- React Native 0.60 Support [#375](https://github.com/wix/react-native-notifications/pull/375)
-- New api changes ios [#342](https://github.com/wix/react-native-notifications/pull/342)
+- React Native 0.60 Support [#375](https://github.com/wix/rn-notifications/pull/375)
+- New api changes ios [#342](https://github.com/wix/rn-notifications/pull/342)
 
 ---
 
