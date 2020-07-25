@@ -43,4 +43,6 @@
 
 - (void)getDeliveredNotifications:(RCTResponseSenderBlock)callback;
 
+- (void)getScheduledLocalNotifications:(RCTPromiseResolveBlock)resolve
+                                reject:(RCTPromiseRejectBlock)reject;
 @end

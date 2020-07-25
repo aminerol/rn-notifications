@@ -2,6 +2,7 @@ import { Notification } from '../DTO/Notification';
 import { NotificationCompletion } from '../interfaces/NotificationCompletion';
 import { NotificationPermissions } from '../interfaces/NotificationPermissions';
 import { NotificationCategory } from '../interfaces/NotificationCategory';
+import { NotificationRequest } from '../DTO/NotificationRequest';
 export declare class NativeCommandsSender {
     private readonly nativeCommandsModule;
     constructor();
@@ -22,6 +23,7 @@ export declare class NativeCommandsSender {
     removeAllDeliveredNotifications(): void;
     removeDeliveredNotifications(identifiers: Array<string>): void;
     getDeliveredNotifications(): Promise<Notification[]>;
+    getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
     finishPresentingNotification(notificationId: string, notificationCompletion: NotificationCompletion): void;
     finishHandlingAction(notificationId: string): void;
     finishHandlingBackgroundAction(notificationId: string, backgroundFetchResult: string): void;

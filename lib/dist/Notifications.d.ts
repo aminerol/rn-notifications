@@ -3,6 +3,7 @@ import { Notification } from './DTO/Notification';
 import { NotificationCategory } from './interfaces/NotificationCategory';
 import { NotificationsIOS } from './NotificationsIOS';
 import { NotificationsAndroid } from './NotificationsAndroid';
+import { NotificationRequest } from './DTO/NotificationRequest';
 export declare class NotificationsRoot {
     readonly _ios: NotificationsIOS;
     readonly _android: NotificationsAndroid;
@@ -39,6 +40,10 @@ export declare class NotificationsRoot {
      * removeAllDeliveredNotifications
      */
     removeAllDeliveredNotifications(): void;
+    /**
+     * getScheduledLocalNotifications
+     */
+    getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
     /**
      * isRegisteredForRemoteNotifications
      */

@@ -4,6 +4,7 @@ import { NotificationCategory } from '../interfaces/NotificationCategory';
 import { NotificationPermissions } from '../interfaces/NotificationPermissions';
 import { UniqueIdProvider } from '../adapters/UniqueIdProvider';
 import { NotificationFactory } from '../DTO/NotificationFactory';
+import { NotificationRequest } from '../DTO/NotificationRequest';
 export declare class Commands {
     private readonly nativeCommandsSender;
     private readonly uniqueIdProvider;
@@ -25,5 +26,6 @@ export declare class Commands {
     removeAllDeliveredNotifications(): void;
     removeDeliveredNotifications(identifiers: Array<string>): void;
     getDeliveredNotifications(): Promise<Notification[]>;
+    getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
     refreshToken(): void;
 }

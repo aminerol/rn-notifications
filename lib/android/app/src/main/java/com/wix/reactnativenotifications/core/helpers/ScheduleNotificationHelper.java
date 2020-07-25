@@ -12,6 +12,9 @@ import android.util.Log;
 import com.wix.reactnativenotifications.core.notification.PushNotificationProps;
 import com.wix.reactnativenotifications.core.notification.PushNotificationPublisher;
 
+import java.util.Map;
+import java.util.Set;
+
 import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
 public class ScheduleNotificationHelper {
@@ -77,6 +80,10 @@ public class ScheduleNotificationHelper {
 
     public java.util.Set<String> getPreferencesKeys() {
         return scheduledNotificationsPersistence.getAll().keySet();
+    }
+
+    public Set<? extends Map.Entry<String, ?>> getPreferencesValues() {
+        return scheduledNotificationsPersistence.getAll().entrySet();
     }
 
     private static void commit(SharedPreferences.Editor editor) {

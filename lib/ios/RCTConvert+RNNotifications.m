@@ -88,6 +88,28 @@
                                                 content:content trigger:trigger];
 }
 
++ (NSDictionary *)UNNotificationRequestPayload:(UNNotificationRequest *)notification {
+    NSMutableDictionary *formattedNotification = [NSMutableDictionary dictionary];
+    UNNotificationContent *content = notification.content;
+    formattedNotification[@"identifier"] = notification.identifier;
+    UNCalendarNotificationTrigger *trigger = (UNCalendarNotificationTrigger *)notification.trigger;
+    if (trigger.nextTriggerDate) {
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"];
+        NSString *dateString = [formatter stringFromDate:trigger.nextTriggerDate];
+        formattedNotification[@"date"] = dateString;
+    }
+    
+    formattedNotification[@"title"] = RCTNullIfNil(content.title);
+    formattedNotification[@"body"] = RCTNullIfNil(content.body);
+    formattedNotification[@"category"] = RCTNullIfNil(content.categoryIdentifier);
+    formattedNotification[@"thread"] = RCTNullIfNil(content.threadIdentifier);
+    
+    [formattedNotification addEntriesFromDictionary:[NSDictionary dictionaryWithDictionary:RCTNullIfNil(RCTJSONClean(content.userInfo))]];
+    
+    return formattedNotification;
+}
+
 @end
 
 @implementation RCTConvert (UNNotification)

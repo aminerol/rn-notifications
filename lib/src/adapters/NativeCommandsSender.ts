@@ -3,6 +3,7 @@ import { Notification } from '../DTO/Notification';
 import { NotificationCompletion } from '../interfaces/NotificationCompletion';
 import { NotificationPermissions } from '../interfaces/NotificationPermissions';
 import { NotificationCategory } from '../interfaces/NotificationCategory';
+import { NotificationRequest } from '../DTO/NotificationRequest';
 
 interface NativeCommandsModule {
   getInitialNotification(): Promise<Object>;
@@ -21,6 +22,7 @@ interface NativeCommandsModule {
   removeDeliveredNotifications(identifiers: Array<string>): void;
   removeAllDeliveredNotifications(): void;
   getDeliveredNotifications(): Promise<Notification[]>;
+  getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
   setCategories(categories: [NotificationCategory?]): void;
   finishPresentingNotification(notificationId: string, callback: NotificationCompletion): void;
   finishHandlingAction(notificationId: string): void;
@@ -99,6 +101,10 @@ export class NativeCommandsSender {
 
   public getDeliveredNotifications(): Promise<Notification[]> {
     return this.nativeCommandsModule.getDeliveredNotifications();
+  }
+
+  public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {
+    return this.nativeCommandsModule.getScheduledLocalNotifications();
   }
 
   finishPresentingNotification(notificationId: string, notificationCompletion: NotificationCompletion): void {

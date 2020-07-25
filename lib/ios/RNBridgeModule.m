@@ -28,6 +28,9 @@ RCT_EXPORT_MODULE();
     if ([_bridge.launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey]) {
         [[RNNotificationsStore sharedInstance] setInitialNotification:[_bridge.launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey]];
     }
+    if ([_bridge.launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey]) {
+        [[RNNotificationsStore sharedInstance] setInitialNotification:[_bridge.launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey]];
+    }
 }
 
 #pragma mark - JS interface
@@ -91,6 +94,12 @@ RCT_EXPORT_METHOD(isRegisteredForRemoteNotifications:(RCTPromiseResolveBlock)res
 RCT_EXPORT_METHOD(checkPermissions:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     [_commandsHandler checkPermissions:resolve reject:reject];
+}
+
+RCT_EXPORT_METHOD(getScheduledLocalNotifications:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+    [_commandsHandler getScheduledLocalNotifications:resolve reject:reject];
 }
 
 #if !TARGET_OS_TV

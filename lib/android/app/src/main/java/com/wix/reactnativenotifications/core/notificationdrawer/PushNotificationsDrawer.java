@@ -7,10 +7,18 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.WritableArray;
 import com.wix.reactnativenotifications.BuildConfig;
+import com.wix.reactnativenotifications.core.helpers.JSONHelpers;
 import com.wix.reactnativenotifications.core.helpers.ScheduleNotificationHelper;
 import com.wix.reactnativenotifications.core.AppLaunchHelper;
 import com.wix.reactnativenotifications.core.InitialNotificationHolder;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Map;
 
 import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
@@ -90,6 +98,22 @@ public class PushNotificationsDrawer implements IPushNotificationsDrawer {
     protected void clearAll() {
         final NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
+    }
+
+    @Override
+    public WritableArray onGetScheduledLocalNotifications() {
+        if(BuildConfig.DEBUG) Log.i(LOGTAG, "Get all scheduled notifications");
+        WritableArray scheduled = Arguments.createArray();
+        ScheduleNotificationHelper helper = ScheduleNotificationHelper.getInstance(mContext);
+        for (Map.Entry<String, ?> entry : helper.getPreferencesValues()) {
+            try {
+                JSONObject json = new JSONObject(entry.getValue().toString());
+                scheduled.pushMap(JSONHelpers.jsonToReact(json));
+            } catch (JSONException e) {
+                Log.e(LOGTAG, e.getMessage());
+            }
+        }
+        return scheduled;
     }
 
     protected void cancelAllScheduledNotifications() {

@@ -5,6 +5,7 @@ import { NotificationCategory } from '../interfaces/NotificationCategory';
 import { NotificationPermissions } from '../interfaces/NotificationPermissions';
 import { UniqueIdProvider } from '../adapters/UniqueIdProvider';
 import { NotificationFactory } from '../DTO/NotificationFactory';
+import { NotificationRequest } from '../DTO/NotificationRequest';
 
 export class Commands {
   constructor(
@@ -87,6 +88,10 @@ export class Commands {
 
   public getDeliveredNotifications(): Promise<Notification[]> {
     return this.nativeCommandsSender.getDeliveredNotifications();
+  }
+
+  public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {
+    return this.nativeCommandsSender.getScheduledLocalNotifications();
   }
 
   public refreshToken() {

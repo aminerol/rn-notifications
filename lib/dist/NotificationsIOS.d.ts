@@ -33,7 +33,7 @@ export declare class NotificationsIOS {
     /**
      * checkPermissions
      */
-    checkPermissions(): Promise<import("rn-notifications/lib/src/interfaces/NotificationPermissions").NotificationPermissions>;
+    checkPermissions(): Promise<import("./interfaces/NotificationPermissions").NotificationPermissions>;
     /**
      * removeDeliveredNotifications
      * @param identifiers Array of notification identifiers

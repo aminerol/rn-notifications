@@ -86,4 +86,8 @@
     [_notificationCenter getDeliveredNotifications:callback];
 }
 
+- (void)getScheduledLocalNotifications:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
+    [_notificationCenter getScheduledLocalNotifications:resolve];
+}
+
 @end

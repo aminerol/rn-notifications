@@ -1,6 +1,12 @@
 package com.wix.reactnativenotifications.core.notification;
 
+import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.RequiresApi;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class PushNotificationProps {
 
@@ -22,13 +28,17 @@ public class PushNotificationProps {
         return (Bundle) mBundle.clone();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder(1024);
+        JSONObject json = new JSONObject();
         for (String key : mBundle.keySet()) {
-            sb.append(key).append("=").append(mBundle.get(key)).append(", ");
+            try {
+                json.put(key, JSONObject.wrap(mBundle.get(key)));
+            } catch(JSONException e) {
+            }
         }
-        return sb.toString();
+        return json.toString();
     }
 
     protected PushNotificationProps copy() {

@@ -10,6 +10,7 @@ import { NotificationCategory } from './interfaces/NotificationCategory';
 import { NotificationsIOS } from './NotificationsIOS';
 import { NotificationsAndroid } from './NotificationsAndroid';
 import { NotificationFactory } from './DTO/NotificationFactory';
+import { NotificationRequest } from './DTO/NotificationRequest';
 
 export class NotificationsRoot {
   public readonly _ios: NotificationsIOS;
@@ -83,6 +84,13 @@ export class NotificationsRoot {
    */
   public removeAllDeliveredNotifications() {
     return this.commands.removeAllDeliveredNotifications();
+  }
+
+  /**
+   * getScheduledLocalNotifications
+   */
+  public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {
+    return this.commands.getScheduledLocalNotifications();
   }
 
   /**

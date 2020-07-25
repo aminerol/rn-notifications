@@ -11,6 +11,7 @@
 
 @interface RCTConvert (UNNotificationRequest)
 + (UNNotificationRequest *)UNNotificationRequest:(id)json withId:(NSNumber*)notificationId;
++ (NSDictionary *)UNNotificationRequestPayload:(UNNotificationRequest *)notification;
 @end
 
 @interface RCTConvert (UNNotification)
