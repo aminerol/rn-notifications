@@ -2,6 +2,7 @@ import { Notification } from './DTO/Notification';
 import { Commands } from './commands/Commands';
 import { Platform } from 'react-native';
 import { EventsRegistryIOS } from './events/EventsRegistryIOS';
+import { NotificationRequest } from './DTO/NotificationRequest';
 
 export class NotificationsIOS {
   constructor(private readonly commands: Commands, private readonly eventsRegistry: EventsRegistryIOS) {
@@ -79,6 +80,13 @@ export class NotificationsIOS {
    */
   public getDeliveredNotifications(): Promise<Notification[]> {
     return this.commands.getDeliveredNotifications();
+  }
+
+  /**
+   * getScheduledLocalNotifications
+   */
+  public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {
+    return this.commands.getScheduledLocalNotifications();
   }
 
   /**

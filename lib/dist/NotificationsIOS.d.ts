@@ -1,6 +1,7 @@
 import { Notification } from './DTO/Notification';
 import { Commands } from './commands/Commands';
 import { EventsRegistryIOS } from './events/EventsRegistryIOS';
+import { NotificationRequest } from './DTO/NotificationRequest';
 export declare class NotificationsIOS {
     private readonly commands;
     private readonly eventsRegistry;
@@ -43,6 +44,10 @@ export declare class NotificationsIOS {
      * getDeliveredNotifications
      */
     getDeliveredNotifications(): Promise<Notification[]>;
+    /**
+     * getScheduledLocalNotifications
+     */
+    getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
     /**
      * Obtain the events registry instance
      */

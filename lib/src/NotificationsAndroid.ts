@@ -1,6 +1,7 @@
 import { Commands } from './commands/Commands';
 import { Platform } from 'react-native';
 import { Notification } from './DTO/Notification';
+import { NotificationRequest } from './DTO/NotificationRequest';
 
 export class NotificationsAndroid {
   constructor(private readonly commands: Commands) {
@@ -27,5 +28,12 @@ export class NotificationsAndroid {
    */
   public scheduleLocalNotification(notification: Notification, id: number) {
     return this.commands.scheduleLocalNotification(notification, id);
+  }
+
+  /**
+   * getScheduledLocalNotifications
+   */
+  public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {
+    return this.commands.getScheduledLocalNotifications();
   }
 }
