@@ -45,6 +45,10 @@ export declare class NotificationsRoot {
      */
     getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
     /**
+     * getDeliveredNotifications
+     */
+    getDeliveredNotifications(): Promise<Notification[]>;
+    /**
      * isRegisteredForRemoteNotifications
      */
     isRegisteredForRemoteNotifications(): Promise<boolean>;

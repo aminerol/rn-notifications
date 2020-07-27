@@ -116,6 +116,13 @@ public class RNNotificationsModule extends ReactContextBaseJavaModule implements
     }
 
     @ReactMethod
+    public void getDeliveredNotifications(final Promise promise) {
+        Log.d(LOGTAG, "Native method invocation: getDeliveredNotifications");
+        IPushNotificationsDrawer notificationsDrawer = PushNotificationsDrawer.get(getReactApplicationContext().getApplicationContext());
+        promise.resolve(notificationsDrawer.onGetDeliveredNotifications());
+    }
+
+    @ReactMethod
     public void cancelLocalNotification(String notificationId) {
         IPushNotificationsDrawer notificationsDrawer = PushNotificationsDrawer.get(getReactApplicationContext().getApplicationContext());
         notificationsDrawer.onNotificationClearRequest(notificationId);

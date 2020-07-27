@@ -36,4 +36,11 @@ export class NotificationsAndroid {
   public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {
     return this.commands.getScheduledLocalNotifications();
   }
+
+  /**
+   * getDeliveredNotifications
+   */
+  public getDeliveredNotifications(): Promise<Notification[]> {
+    return this.commands.getDeliveredNotifications();
+  }
 }

@@ -16,4 +16,8 @@ export declare class NotificationsAndroid {
      * getScheduledLocalNotifications
      */
     getScheduledLocalNotifications(): Promise<NotificationRequest[]>;
+    /**
+     * getDeliveredNotifications
+     */
+    getDeliveredNotifications(): Promise<Notification[]>;
 }

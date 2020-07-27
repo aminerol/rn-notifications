@@ -1,14 +1,24 @@
 package com.wix.reactnativenotifications.core.helpers;
 
+import android.os.Build;
+import android.os.Bundle;
+import android.util.Log;
+
+import androidx.annotation.RequiresApi;
+
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
+
+import com.wix.reactnativenotifications.BuildConfig;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Iterator;
+
+import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
 public class JSONHelpers {
 
@@ -55,5 +65,18 @@ public class JSONHelpers {
             }
         }
         return writableArray;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public static JSONObject BundleToJson(Bundle mBundle) {
+        JSONObject json = new JSONObject();
+        for (String key : mBundle.keySet()) {
+            try{
+                json.put(key, JSONObject.wrap(mBundle.get(key)));
+            }catch(JSONException e){
+                if(BuildConfig.DEBUG) Log.d(LOGTAG, "Error encountered while serializing Android notification extras: " + key + " -> " + mBundle.get(key), e);
+            }
+        }
+        return json;
     }
 }

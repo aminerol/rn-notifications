@@ -41,8 +41,9 @@
 
 - (void)removeDeliveredNotifications:(NSArray<NSString *> *)identifiers;
 
-- (void)getDeliveredNotifications:(RCTResponseSenderBlock)callback;
-
+- (void)getDeliveredNotifications:(RCTPromiseResolveBlock)resolve
+                                reject:(RCTPromiseRejectBlock)reject;
+                                
 - (void)getScheduledLocalNotifications:(RCTPromiseResolveBlock)resolve
                                 reject:(RCTPromiseRejectBlock)reject;
 @end

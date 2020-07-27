@@ -23,6 +23,7 @@ import com.wix.reactnativenotifications.core.NotificationIntentAdapter;
 import com.wix.reactnativenotifications.core.ProxyService;
 import com.wix.reactnativenotifications.core.helpers.ScheduleNotificationHelper;
 
+import static com.wix.reactnativenotifications.Defs.EXTRAS_NOTIFICATION_REQUEST_KEY;
 import static com.wix.reactnativenotifications.Defs.LOGTAG;
 import static com.wix.reactnativenotifications.Defs.NOTIFICATION_OPENED_EVENT_NAME;
 import static com.wix.reactnativenotifications.Defs.NOTIFICATION_RECEIVED_EVENT_NAME;
@@ -202,6 +203,12 @@ public class PushNotification implements IPushNotification {
             final NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.createNotificationChannel(channel);
             notification.setChannelId(CHANNEL_ID);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
+            Bundle requestExtras = new Bundle();
+            requestExtras.putBundle(EXTRAS_NOTIFICATION_REQUEST_KEY, mNotificationProps.asBundle());
+            notification.addExtras(requestExtras);
         }
 
         return notification;

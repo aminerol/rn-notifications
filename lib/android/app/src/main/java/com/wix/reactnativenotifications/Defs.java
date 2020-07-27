@@ -7,4 +7,5 @@ public interface Defs {
 
     String NOTIFICATION_RECEIVED_EVENT_NAME = "notificationReceived";
     String NOTIFICATION_OPENED_EVENT_NAME = "notificationOpened";
+    String EXTRAS_NOTIFICATION_REQUEST_KEY = "notificationRequest";
 }

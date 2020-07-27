@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.service.notification.StatusBarNotification;
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
@@ -18,8 +20,10 @@ import com.wix.reactnativenotifications.core.InitialNotificationHolder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Collection;
 import java.util.Map;
 
+import static com.wix.reactnativenotifications.Defs.EXTRAS_NOTIFICATION_REQUEST_KEY;
 import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
 public class PushNotificationsDrawer implements IPushNotificationsDrawer {
@@ -110,10 +114,33 @@ public class PushNotificationsDrawer implements IPushNotificationsDrawer {
                 JSONObject json = new JSONObject(entry.getValue().toString());
                 scheduled.pushMap(JSONHelpers.jsonToReact(json));
             } catch (JSONException e) {
-                Log.e(LOGTAG, e.getMessage());
+                if(BuildConfig.DEBUG) Log.e(LOGTAG, e.getMessage());
             }
         }
         return scheduled;
+    }
+
+    @Override
+    public WritableArray onGetDeliveredNotifications() {
+        if(BuildConfig.DEBUG) Log.i(LOGTAG, "Get all delivered notifications");
+        WritableArray delivered = Arguments.createArray();
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return delivered;
+        }
+        final NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+        StatusBarNotification[] activeNotifications = notificationManager.getActiveNotifications();
+        for (StatusBarNotification statusBarNotification : activeNotifications) {
+            try {
+                Bundle extra = statusBarNotification.getNotification().extras.getBundle(EXTRAS_NOTIFICATION_REQUEST_KEY);
+                if(extra != null){
+                    JSONObject json = JSONHelpers.BundleToJson(extra);
+                    delivered.pushMap(JSONHelpers.jsonToReact(json));
+                }
+            }catch (JSONException e) {
+                if(BuildConfig.DEBUG) Log.e(LOGTAG, e.getMessage());
+            }
+        }
+        return delivered;
     }
 
     protected void cancelAllScheduledNotifications() {

@@ -50,7 +50,7 @@
     [center removeDeliveredNotificationsWithIdentifiers:identifiers];
 }
 
-- (void)getDeliveredNotifications:(RCTResponseSenderBlock)callback {
+- (void)getDeliveredNotifications:(RCTPromiseResolveBlock)resolve {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     [center getDeliveredNotificationsWithCompletionHandler:^(NSArray<UNNotification *> * _Nonnull notifications) {
         NSMutableArray<NSDictionary *> *formattedNotifications = [NSMutableArray new];
@@ -58,7 +58,7 @@
         for (UNNotification *notification in notifications) {
             [formattedNotifications addObject:[RCTConvert UNNotificationPayload:notification]];
         }
-        callback(@[formattedNotifications]);
+        resolve(formattedNotifications);
     }];
 }
 

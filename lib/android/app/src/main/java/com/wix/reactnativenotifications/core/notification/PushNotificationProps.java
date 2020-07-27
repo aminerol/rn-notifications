@@ -5,8 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.wix.reactnativenotifications.core.helpers.JSONHelpers;
+import com.wix.reactnativenotifications.BuildConfig;
 
 public class PushNotificationProps {
 
@@ -31,14 +31,7 @@ public class PushNotificationProps {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public String toString() {
-        JSONObject json = new JSONObject();
-        for (String key : mBundle.keySet()) {
-            try {
-                json.put(key, JSONObject.wrap(mBundle.get(key)));
-            } catch(JSONException e) {
-            }
-        }
-        return json.toString();
+        return JSONHelpers.BundleToJson(mBundle).toString();
     }
 
     protected PushNotificationProps copy() {
