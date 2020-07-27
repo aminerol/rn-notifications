@@ -41,6 +41,11 @@ export declare class NotificationsRoot {
      */
     removeAllDeliveredNotifications(): void;
     /**
+     * removeDeliveredNotifications
+     * @param identifiers Array of notification identifiers
+     */
+    removeDeliveredNotifications(identifiers: Array<string>): void;
+    /**
      * getScheduledLocalNotifications
      */
     getScheduledLocalNotifications(): Promise<NotificationRequest[]>;

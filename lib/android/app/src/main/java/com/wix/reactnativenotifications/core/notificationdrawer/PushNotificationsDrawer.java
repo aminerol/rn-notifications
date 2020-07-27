@@ -10,6 +10,7 @@ import android.service.notification.StatusBarNotification;
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.WritableArray;
 import com.wix.reactnativenotifications.BuildConfig;
 import com.wix.reactnativenotifications.core.helpers.JSONHelpers;
@@ -20,7 +21,8 @@ import com.wix.reactnativenotifications.core.InitialNotificationHolder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import static com.wix.reactnativenotifications.Defs.EXTRAS_NOTIFICATION_REQUEST_KEY;
@@ -76,21 +78,19 @@ public class PushNotificationsDrawer implements IPushNotificationsDrawer {
     @Override
     public void onNotificationClearRequest(String id) {
         cancelScheduledNotification(id);
-//        final NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
-//        notificationManager.cancel(id);
     }
 
     @Override
-    public void onNotificationClearRequest(String tag, int id) {
-        final NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.cancel(tag, id);
+    public void onNotificationClearRequest(ReadableArray notificationIds) {
+        ArrayList<String> ids = Arguments.toList(notificationIds);
+        for (String notificationId: ids) {
+            cancelScheduledNotification(notificationId);
+        }
     }
 
     @Override
     public void onAllNotificationsClearRequest() {
         cancelAllScheduledNotifications();
-//        final NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
-//        notificationManager.cancelAll();
     }
 
     @Override

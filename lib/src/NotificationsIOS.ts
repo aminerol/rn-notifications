@@ -76,6 +76,13 @@ export class NotificationsIOS {
   }
 
   /**
+   * removeAllDeliveredNotifications
+   */
+  public removeAllDeliveredNotifications() {
+    return this.commands.removeAllDeliveredNotifications();
+  }
+
+  /**
    * getDeliveredNotifications
    */
   public getDeliveredNotifications(): Promise<Notification[]> {

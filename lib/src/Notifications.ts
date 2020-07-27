@@ -87,6 +87,14 @@ export class NotificationsRoot {
   }
 
   /**
+   * removeDeliveredNotifications
+   * @param identifiers Array of notification identifiers
+   */
+  public removeDeliveredNotifications(identifiers: Array<string>) {
+    return this.commands.removeDeliveredNotifications(identifiers);
+  }
+
+  /**
    * getScheduledLocalNotifications
    */
   public getScheduledLocalNotifications(): Promise<NotificationRequest[]> {

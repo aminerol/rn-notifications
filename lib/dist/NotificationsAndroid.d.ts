@@ -20,4 +20,13 @@ export declare class NotificationsAndroid {
      * getDeliveredNotifications
      */
     getDeliveredNotifications(): Promise<Notification[]>;
+    /**
+     * removeDeliveredNotifications
+     * @param identifiers Array of notification identifiers
+     */
+    removeDeliveredNotifications(identifiers: Array<string>): void;
+    /**
+     * removeAllDeliveredNotifications
+     */
+    removeAllDeliveredNotifications(): void;
 }

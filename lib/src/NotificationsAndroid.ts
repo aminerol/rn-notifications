@@ -43,4 +43,19 @@ export class NotificationsAndroid {
   public getDeliveredNotifications(): Promise<Notification[]> {
     return this.commands.getDeliveredNotifications();
   }
+
+  /**
+   * removeDeliveredNotifications
+   * @param identifiers Array of notification identifiers
+   */
+  public removeDeliveredNotifications(identifiers: Array<string>) {
+    return this.commands.removeDeliveredNotifications(identifiers);
+  }
+
+  /**
+   * removeAllDeliveredNotifications
+   */
+  public removeAllDeliveredNotifications() {
+    return this.commands.removeAllDeliveredNotifications();
+  }
 }

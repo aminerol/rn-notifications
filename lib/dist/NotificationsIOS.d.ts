@@ -41,6 +41,10 @@ export declare class NotificationsIOS {
      */
     removeDeliveredNotifications(identifiers: Array<string>): void;
     /**
+     * removeAllDeliveredNotifications
+     */
+    removeAllDeliveredNotifications(): void;
+    /**
      * getDeliveredNotifications
      */
     getDeliveredNotifications(): Promise<Notification[]>;

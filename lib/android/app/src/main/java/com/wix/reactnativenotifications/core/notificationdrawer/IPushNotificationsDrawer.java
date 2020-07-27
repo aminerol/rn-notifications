@@ -3,6 +3,9 @@ package com.wix.reactnativenotifications.core.notificationdrawer;
 import android.app.Activity;
 
 import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.ReadableArray;
+
+import java.util.List;
 
 public interface IPushNotificationsDrawer {
     void onAppInit();
@@ -12,7 +15,7 @@ public interface IPushNotificationsDrawer {
     void onNotificationOpened();
     void onNotificationClearRequest(String id);
     void onCancelAllLocalNotifications();
-    void onNotificationClearRequest(String tag, int id);
+    void onNotificationClearRequest(ReadableArray notificationIds);
     void onAllNotificationsClearRequest();
     WritableArray onGetScheduledLocalNotifications();
     WritableArray onGetDeliveredNotifications();

@@ -26,6 +26,8 @@ import com.wix.reactnativenotifications.core.notificationdrawer.IPushNotificatio
 import com.wix.reactnativenotifications.core.notificationdrawer.PushNotificationsDrawer;
 import com.wix.reactnativenotifications.fcm.FcmInstanceIdRefreshHandlerService;
 
+import java.util.List;
+
 import static com.wix.reactnativenotifications.Defs.LOGTAG;
 
 public class RNNotificationsModule extends ReactContextBaseJavaModule implements ActivityEventListener {
@@ -138,10 +140,11 @@ public class RNNotificationsModule extends ReactContextBaseJavaModule implements
     public void setCategories(ReadableArray categories) {
     
     }
-    
-    public void cancelDeliveredNotification(String tag, int notificationId) {
+
+    @ReactMethod
+    public void removeDeliveredNotifications(ReadableArray notificationIds) {
         IPushNotificationsDrawer notificationsDrawer = PushNotificationsDrawer.get(getReactApplicationContext().getApplicationContext());
-        notificationsDrawer.onNotificationClearRequest(tag, notificationId);
+        notificationsDrawer.onNotificationClearRequest(notificationIds);
     }
 
     @ReactMethod
@@ -150,7 +153,8 @@ public class RNNotificationsModule extends ReactContextBaseJavaModule implements
         promise.resolve(new Boolean(hasPermission));
     }
 
-    @ReactMethod void removeAllDeliveredNotifications() {
+    @ReactMethod
+    void removeAllDeliveredNotifications() {
         IPushNotificationsDrawer notificationsDrawer = PushNotificationsDrawer.get(getReactApplicationContext().getApplicationContext());
         notificationsDrawer.onAllNotificationsClearRequest();
     }
