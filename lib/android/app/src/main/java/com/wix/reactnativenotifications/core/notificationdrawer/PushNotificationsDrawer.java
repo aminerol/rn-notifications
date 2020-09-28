@@ -134,6 +134,7 @@ public class PushNotificationsDrawer implements IPushNotificationsDrawer {
                 Bundle extra = statusBarNotification.getNotification().extras.getBundle(EXTRAS_NOTIFICATION_REQUEST_KEY);
                 if(extra != null){
                     JSONObject json = JSONHelpers.BundleToJson(extra);
+                    json.put("identifier", statusBarNotification.getId());
                     delivered.pushMap(JSONHelpers.jsonToReact(json));
                 }
             }catch (JSONException e) {
